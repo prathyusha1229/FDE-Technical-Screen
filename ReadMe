@@ -1,0 +1,22 @@
+# Package Sorter (Edge-Case Safe)
+
+Classifies packages as **STANDARD**, **SPECIAL**, or **REJECTED**.
+
+## Rules
+
+- **Bulky** if:
+  - Volume `width * height * length` ≥ **1,000,000 cm³**, **or**
+  - **Any** single dimension ≥ **150 cm**.
+- **Heavy** if mass ≥ **20 kg**.
+
+**Output**
+- `STANDARD` — neither bulky nor heavy  
+- `SPECIAL` — bulky **or** heavy (but **not** both)  
+- `REJECTED` — both bulky **and** heavy
+
+Units: centimeters (dimensions) and kilograms (mass).
+
+## Installation / Usage
+
+```bash
+python package_sorter.py  # runs self-tests
